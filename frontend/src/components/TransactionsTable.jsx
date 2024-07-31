@@ -14,7 +14,8 @@ const TransactionsTable = ({ selectedMonth }) => {
   const fetchTransactions = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/transactions`,
+        // `http://localhost:5000/api/transactions`,
+        `https://mern-challenge-3zh4.onrender.com/api/transactions`,
         {
           params: { month: selectedMonth, search, page },
         }
