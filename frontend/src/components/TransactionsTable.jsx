@@ -38,18 +38,18 @@ const TransactionsTable = ({ selectedMonth }) => {
           className="w-full border rounded p-2 mb-4"
         />
         <div className="overflow-x-auto">
-          <table className="w-full">
+          <table className="w-full table-auto">
             <thead>
               <tr>
-                <th className="text-left p-2">Title</th>
-                <th className="text-left p-2">Description</th>
-                <th className="text-left p-2">Price</th>
-                <th className="text-left p-2">Date of Sale</th>
+                <th className="text-left p-2 border-b">Title</th>
+                <th className="text-left p-2 border-b">Description</th>
+                <th className="text-left p-2 border-b">Price</th>
+                <th className="text-left p-2 border-b">Date of Sale</th>
               </tr>
             </thead>
             <tbody>
               {transactions.map((transaction) => (
-                <tr key={transaction._id}>
+                <tr key={transaction._id} className="border-b">
                   <td className="p-2">{transaction.title}</td>
                   <td className="p-2">{transaction.description}</td>
                   <td className="p-2">${transaction.price.toFixed(2)}</td>

@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import TransactionsTable from "./components/TransactionsTable";
@@ -42,7 +41,7 @@ const App = () => {
           id="month-select"
           value={selectedMonth}
           onChange={(e) => setSelectedMonth(parseInt(e.target.value))}
-          className="w-full md:w-64"
+          className="w-full md:w-64 border rounded p-2"
         >
           {[...Array(12)].map((_, index) => (
             <option key={index + 1} value={index + 1}>
