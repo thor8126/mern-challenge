@@ -14,7 +14,8 @@ const App = () => {
     const fetchCombinedData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/chart/combined?month=${selectedMonth}`
+          `https://mern-challenge-3zh4.onrender.com/api/chart/combined?month=${selectedMonth}`
+          // `http://localhost:5000/api/chart/combined?month=${selectedMonth}`
         );
         setCombinedData(response.data);
       } catch (error) {
